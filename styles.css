@@ -1,0 +1,84 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: black; /* Set background color to black */
+  color: #ffffff;
+  margin: 0;
+  height: 100vh; /* Full height for better centering */
+  display: flex; /* Flex display for centering */
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Prevent scrollbars */
+}
+
+.container {
+  text-align: center;
+  padding: 60px 50px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+  background-color: transparent; /* Slightly transparent for depth */
+  backdrop-filter: blur(10px); /* Add a frosted glass effect */
+}
+
+
+h1 {
+  font-size: 2.5em;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  text-transform: uppercase; /* Make the title bold */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.flip-clock {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.card {
+  height: 140px;
+  width: 150px;
+  margin: 0 15px;
+  perspective: 1000px;
+}
+
+.card div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5em; /* Larger font for visibility */
+  background: linear-gradient(to bottom right, rgba(10, 10, 30, 0.8), rgba(30, 30, 70, 0.8)); /* Gradient background */
+  color: #ffffff;
+  border-radius: 15px;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform 0.6s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+.card:hover .front, .card:hover .back {
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5); /* Add hover effect */
+}
+
+.back {
+  transform: rotateX(180deg);
+}
+
+.card.flipped .front {
+  transform: rotateX(-180deg);
+}
+
+.card.flipped .back {
+  transform: rotateX(0deg);
+}
+
+/* Smoothen flip transitions */
+.card.flipped .front {
+  transition: transform 0.3s ease;
+}
+
+.card.flipped .back {
+  transition: transform 0.3s ease;
+}
