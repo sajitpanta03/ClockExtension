@@ -1,0 +1,15 @@
+Web Extension for Clock Extension which count number of days remaining in a year.
+
+Go to Browser Extensions:
+
+Example: Open Browser eg:Chrome and navigate to chrome://extensions/.
+Enable Developer Mode:
+
+In the top right, toggle the Developer Mode switch to on.
+Load Your Extension:
+
+Click on Load unpacked.
+Select the folder where your extension files (HTML, JS, manifest.json, etc.) are located.
+Use the Extension:
+
+Once the extension is loaded, it will appear in the Chrome toolbar, and you can use it like any other extension.
